@@ -3,12 +3,10 @@
 open System
 open Davenport.Fsharp
 
-let doSomething() = async {
-    return 
-        "localhost:5984"
-        |> database "testing_paket"
-        |> createDatabase
-}
+let doSomething() = 
+    "localhost:5984"
+    |> database "testing_paket"
+    |> createDatabase
 
 [<EntryPoint>]
 let main argv =
